@@ -1,11 +1,9 @@
 
-
-
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Authcontext } from '../../../../component/Providers/Authprovider';
 import { useContext } from 'react';
-
+import logo from '../../../assets/logo.png'
 const Navbar = () => {
     // const [cart] = UseCart()
     // const [isAdmin] = UseAdmin();
@@ -20,7 +18,7 @@ const Navbar = () => {
             .catch(error => console.log(error))
     }
     const navLi = <>
-        <li><Link to='/'>Home</Link></li>
+        <li className='font-bold '><Link to='/'>Home</Link></li>
         <li><Link to='/menu'>Our menu</Link></li>
         <li><Link to='/shop/salad'>Our Shop</Link></li>
         {/* <li><Link to={isAdmin ? 'deshbord/adminhome' : 'deshbord/userhome'}>Dashboard</Link></li> */}
@@ -51,23 +49,23 @@ const Navbar = () => {
     return (
 
 
-        <div className="navbar fixed z-10 bg-opacity-60 bg-sky-400 text-white max-w-screen-xl   mb-5">
+        <div className="navbar fixed z-10 bg-opacity-60   max-w-screen-xl bg-green-300  mb-5">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3  shadow bg-black rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3  shadow bg-green-300 rounded-box w-52">
 
                         {navLi}
 
                     </ul>
 
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl">
-                    <img src='' alt="" />
+                <Link to='/' className=" ">
+                    <img className='w-20' src={logo} alt="" />
                 </Link>
-                <h2 className='text-xl uppercase '>Bistro Boss</h2>
+                <h2 className='text-xl font-bold  uppercase ml-3 '>Mozart</h2>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal mt-5 px-1">

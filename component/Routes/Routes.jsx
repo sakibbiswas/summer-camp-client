@@ -2,6 +2,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Home from '../../src/pages/Home/home/Home.jsx';
 import Main from '../layout/Main.jsx';
+import Login from '../../src/pages/Home/Login/Login.jsx';
+import Signup from '../../src/pages/Home/signup/Signup.jsx';
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -19,14 +21,14 @@ export const router = createBrowserRouter([
             //             path: '/shop/:category',
             //             element: <Shop></Shop>
             //         },
-            //         {
-            //             path: '/login',
-            //             element: <Login></Login>
-            //         },
-            //         {
-            //             path: '/signup',
-            //             element: <Signup></Signup>
-            //         },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <Signup></Signup>
+            },
             //     ]
             // },
             // {

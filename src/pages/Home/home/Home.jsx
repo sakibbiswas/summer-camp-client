@@ -1,16 +1,18 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Helmet } from 'react-helmet-async';
+import Banner from '../banner/Banner';
 
 
 const Home = () => {
     return (
-        <div>
+        <div className='space-y-16'>
 
             <Helmet>
                 <title>school || Home</title>
             </Helmet>
-            <Navbar></Navbar>
+            <Banner></Banner>
+
         </div>
     );
 };

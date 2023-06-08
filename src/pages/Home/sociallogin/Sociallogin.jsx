@@ -1,7 +1,10 @@
-import React, { useContext } from 'react';
-import { Authcontext } from '../Providers/Authprovider';
+
+
+import { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Authcontext } from '../../../../component/Providers/Authprovider';
+
 
 const Sociallogin = () => {
     const location = useLocation();

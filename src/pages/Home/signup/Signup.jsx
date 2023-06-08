@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import signup from '../../assets/others/authentication2.png'
-import { Authcontext } from '../Providers/Authprovider';
-import Sociallogin from '../sociallogin/Sociallogin';
-import { useForm } from 'react-hook-form';
+
+import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Authcontext } from '../../../../component/Providers/Authprovider';
+import { useForm } from 'react-hook-form';
+import { Link, useNavigate } from 'react-router-dom';
+import Sociallogin from '../sociallogin/Sociallogin';
 import Swal from 'sweetalert2';
 
 const Signup = () => {
@@ -56,43 +56,17 @@ const Signup = () => {
                 console.log(error);
             })
     };
-    /* 
-    simple work
-    */
-    // const handelsignup = event => {
-    //     event.preventDefault();
-    //     const form = event.target;
-    //     const name = form.name.value;
-    //     const photo = form.photo.value;
-    //     const email = form.email.value;
-    //     const password = form.password.value;
-    //     console.log(email, password, name, photo);
-    //     createuser(data.email, data.password)
-    //         .then(result => {
-    //             const user = result.user;
-    //             console.log(user);
-    //             loggeduser.displayName = name;
-    //             loggeduser.photoURL = photo;
-    //             update(name, photo)
-    //                 .then(console.log('profile updated'))
-    //         })
-    //         .catch(error => {
-    //             console.log(error);
-    //         })
-    // }
+
     return (
         <>
             <Helmet
             >
-                <title>Bistro boss || signUp</title>
+                <title>Mozart || signUp</title>
             </Helmet>
             <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="mr-12 w-1/2">
+                <div className="hero-content flex-col lg:flex-row">
 
-                        <img src={signup} alt="" />
-                    </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-slate-200">
                         <div className="card-body ">
                             <h1 className="text-5xl font-bold">Sign up</h1>
                             <form onSubmit={handleSubmit(onSubmit)}>
@@ -129,6 +103,24 @@ const Signup = () => {
                                         pattern: /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/
 
                                     })} name='password' placeholder="password" className="input input-bordered" />
+
+                                    {errors.password?.type === 'required' && <span className='text-red-600'>Password is required</span>}
+
+                                    {errors.password?.type === 'minLength' && <span className='text-red-600'>Password must be 6 characters</span>}
+
+                                    {errors.password?.type === 'maxLength' && <span className='text-red-600'>Password must be less then 20 characters</span>}
+
+                                    {errors.password?.type === 'pattern' && <span className='text-red-600'>Password must have one Uppercase one lower case one number and one spacial character</span>}
+                                    <label className="label">
+                                        <span className="label-text"> confirm Password</span>
+                                    </label>
+                                    <input type="password" {...register("confirm", {
+                                        required: true,
+                                        maxLength: 20,
+                                        minLength: 6,
+                                        pattern: /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/
+
+                                    })} name='confirm' placeholder="confirm password" className="input input-bordered" />
 
                                     {errors.password?.type === 'required' && <span className='text-red-600'>Password is required</span>}
 
