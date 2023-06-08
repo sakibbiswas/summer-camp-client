@@ -9,7 +9,6 @@ import Swal from 'sweetalert2';
 
 const Signup = () => {
     const navigate = useNavigate();
-    // react hook form diye kaj kora
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { createuser, update } = useContext(Authcontext)
     const onSubmit = data => {
@@ -17,10 +16,7 @@ const Signup = () => {
         createuser(data.email, data.password)
             .then(result => {
                 const loggeduser = result.user;
-                console.log(loggeduser);
-
-                // loggeduser.displayName = data.name;
-                // loggeduser.photoURL = data.photo;
+                console.log(loggeduser)
 
                 update(data.name, data.photo)
                     .then(() => {
@@ -122,13 +118,10 @@ const Signup = () => {
 
                                     })} name='confirm' placeholder="confirm password" className="input input-bordered" />
 
-                                    {errors.password?.type === 'required' && <span className='text-red-600'>Password is required</span>}
+                                    {errors.confirm?.message}
 
-                                    {errors.password?.type === 'minLength' && <span className='text-red-600'>Password must be 6 characters</span>}
 
-                                    {errors.password?.type === 'maxLength' && <span className='text-red-600'>Password must be less then 20 characters</span>}
 
-                                    {errors.password?.type === 'pattern' && <span className='text-red-600'>Password must have one Uppercase one lower case one number and one spacial character</span>}
 
 
                                     <label className="label">

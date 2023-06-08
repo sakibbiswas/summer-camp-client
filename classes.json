@@ -1,0 +1,66 @@
+
+[
+    {
+        "name": "Saxophone",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ",
+        "image": "https://images.squarespace-cdn.com/content/v1/5762dcb820099e88525c2529/1468895377299-90VFC8G2O5G40YF6ZY6K/Saxophone.jpg?format=1000w",
+        "category": "popular",
+        "price": 1450,
+        "students": 212,
+        "instructor":"Masud",
+        "instructor_img":"https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=2000"
+    },
+    {
+        "name": "Guitar",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ",
+        "image": "https://guitarcoachmag.com/wp-content/uploads/2018/04/Beginners720.jpg",
+        "category": "popular",
+        "price": 1550,
+        "students": 480,
+        "instructor":"Tousif",
+        "instructor_img":"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwZmFjZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+    },
+    {
+        "name": "Bajno",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ",
+        "image": "https://www.ashevillemusicschool.org/wp-content/uploads/2017/02/lessons-banjo.jpg",
+        "category": "popular",
+        "price": 1960,
+        "students": 450,
+        "instructor":"Rifat",
+        "instructor_img":"https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg"
+    },
+    {
+        "name": "Clarinet ",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOOFuiZWTqqnztsmTLl6XLl8tN_OfsJFWeWw&usqp=CAU",
+        "category": "popular",
+        "price": 1450,
+        "students": 212,
+        "instructor":"Tamjid",
+        "instructor_img":"https://media.istockphoto.com/id/1270067126/photo/smiling-indian-man-looking-at-camera.jpg?s=612x612&w=0&k=20&c=ovIQ5GPurLd3mOUj82jB9v-bjGZ8updgy1ACaHMeEC0="
+    },
+    {
+        "name": "Piano",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ",
+        "image": "https://cristofori.asia/main/wp-content/uploads/2021/04/piano_M.jpg",
+        "category": "popular",
+        "price": 3000,
+        "students": 530,
+        "instructor":"Masud",
+        "instructor_img":"https://media.istockphoto.com/id/1319763895/photo/smiling-mixed-race-mature-man-on-grey-background.jpg?s=612x612&w=0&k=20&c=ZiuzNX9LhTMMcRFrYNfq_zFR7O_aH-q7x1L5elko5uU="
+    },
+    {
+        "name":"Drum",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ",
+        "image": "https://media.istockphoto.com/id/887302722/photo/male-pupil-with-teacher-playing-drums-in-music-lesson.jpg?s=612x612&w=0&k=20&c=VgkPXzH3BRJVpA2FQjNHlsq3JyfIsPpAdjQMphWqams=",
+        "category": "popular",
+        "price": 1850,
+        "students": 300,
+        "instructor":"Ahad",
+        "instructor_img":"https://image.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg"
+    }
+
+
+
+]
