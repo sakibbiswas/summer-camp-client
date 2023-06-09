@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from '../../src/firebase/firebase.config';
+import axios from 'axios';
 
 // import axios from 'axios';
 export const Authcontext = createContext()
@@ -29,18 +30,18 @@ const Authprovider = ({ children }) => {
             setuser(currentUser)
             console.log('current user', currentUser);
             // // get and set token 
-            // if (currentUser && currentUser.email) {
-            //     axios.post('https://bistro-boss-server-sakibbiswas.vercel.app/jwt', { email: currentUser.email })
-            //         .then(data => {
-            //             // console.log('jwt response', data.data.token)
-            //             console.log(data);
-            //             localStorage.setItem('access-token', data.data.token)
-            //             setloading(false)
-            //         })
-            // }
-            // else {
-            //     localStorage.removeItem('access-token')
-            // }
+            if (currentUser && currentUser.email) {
+                axios.post('https://bistro-boss-server-sakibbiswas.vercel.app/jwt', { email: currentUser.email })
+                    .then(data => {
+                        // console.log('jwt response', data.data.token)
+                        console.log(data);
+                        localStorage.setItem('access-token', data.data.token)
+                        setloading(false)
+                    })
+            }
+            else {
+                localStorage.removeItem('access-token')
+            }
 
 
 

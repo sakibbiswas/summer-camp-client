@@ -21,7 +21,7 @@ const Signup = () => {
                 update(data.name, data.photo)
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email }
-                        fetch('https://bistro-boss-server-sakibbiswas.vercel.app/users', {
+                        fetch('http://localhost:3000/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -59,7 +59,7 @@ const Signup = () => {
             >
                 <title>Mozart || signUp</title>
             </Helmet>
-            <div className="hero  bg-base-200">
+            <div className="hero   bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
 
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-slate-200">
@@ -70,14 +70,14 @@ const Signup = () => {
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
-                                    <input type="text" name='name'{...register("name", { required: true })} placeholder="Your name" className="input input-bordered" />
+                                    <input type="text" name='name'{...register("name", { required: true })} placeholder="Your name" className="input input-bordered w-[350px]" />
                                     {errors.name && <span className='text-red-600'>Name is required</span>}
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Photo</span>
                                     </label>
-                                    <input type="text" name='photo'{...register("photo", { required: true })} placeholder="Your photoUrl" className="input input-bordered" />
+                                    <input type="text" name='photo'{...register("photo", { required: true })} placeholder="Your photoUrl" className="input input-bordered w-[350px]" />
                                     {errors.photo && <span className='text-red-600'>Photo is required</span>}
                                 </div>
 
@@ -85,7 +85,7 @@ const Signup = () => {
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email" name='email' {...register("email", { required: true })} placeholder="email" className="input input-bordered" />
+                                    <input type="email" name='email' {...register("email", { required: true })} placeholder="email" className="input input-bordered w-[350px]" />
                                     {errors.email && <span className='text-red-600'>Email is required</span>}
                                 </div>
                                 <div className="form-control">
@@ -98,7 +98,7 @@ const Signup = () => {
                                         minLength: 6,
                                         pattern: /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/
 
-                                    })} name='password' placeholder="password" className="input input-bordered" />
+                                    })} name='password' placeholder="password" className="input input-bordered w-[350px]" />
 
                                     {errors.password?.type === 'required' && <span className='text-red-600'>Password is required</span>}
 
@@ -116,7 +116,7 @@ const Signup = () => {
                                         minLength: 6,
                                         pattern: /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/
 
-                                    })} name='confirm' placeholder="confirm password" className="input input-bordered" />
+                                    })} name='confirm' placeholder="confirm password" className="input input-bordered w-[350px]" />
 
                                     {errors.confirm?.message}
 
@@ -130,7 +130,7 @@ const Signup = () => {
                                 </div>
                                 <div className="form-control mt-6">
 
-                                    <input className="btn btn-primary" type="submit" value="signup" />
+                                    <input className="btn btn-primary w-[350px]" type="submit" value="signup" />
                                 </div>
                             </form>
                             <p className='my-4 text-center'>Already have an account please <Link className='text-orange-500 font-bold' to='/login'>login</Link></p>

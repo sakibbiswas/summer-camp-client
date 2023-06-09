@@ -8,7 +8,7 @@ const Classcard = ({ card }) => {
 
 
 
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-80 bg-base-100 shadow-xl">
                 <figure><img className='w-full h-[200px] rounded-xl' src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Class-name : {name}</h2>

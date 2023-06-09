@@ -10,8 +10,8 @@ const Discout = () => {
 
                 <h3 className='text-center mt-5  '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt <br /> dignissimos quaerat cupiditate vit Accusantium, fuga.</h3>
 
-                <p className='my-4 mt-8 ml-[500px] btn btn-outline text-center'><Link className='text-orange-500 font-bold' to='/signup'>Register Now</Link></p>
-                <img className='absolute h-[300px] top-24 left-[900px]' src={pic} alt="" />
+                <p className='my-4 mt-8 ml-[550px] btn btn-outline text-center'><Link className='text-orange-500 font-bold' to='/signup'>Register Now</Link></p>
+                <img className='absolute md:h-[300px] top-24 md:left-[900px]' src={pic} alt="" />
 
 
             </div>

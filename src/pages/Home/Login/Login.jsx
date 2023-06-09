@@ -62,13 +62,13 @@ const Login = () => {
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email" name='email' placeholder="email" className="input input-bordered  " required />
+                                    <input type="email" name='email' placeholder="email" className="input input-bordered w-[350px] " required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" name='password' placeholder="password" className="input input-bordered " required />
+                                    <input type="password" name='password' placeholder="password" className="input input-bordered w-[350px]" required />
                                     <label className="label">
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     </label>
@@ -76,7 +76,7 @@ const Login = () => {
 
                                 <div className="form-control mt-4">
 
-                                    <input className="btn btn-primary btn-md " type="submit" value="login" />
+                                    <input className="btn btn-primary btn-md w-[350px] " type="submit" value="login" />
                                 </div>
                             </form>
                             <p className='my-4 text-center'>New to bistro boss <Link className='text-orange-500 font-bold' to='/signup'>Sign Up</Link></p>
