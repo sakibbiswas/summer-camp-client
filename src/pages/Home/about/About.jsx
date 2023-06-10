@@ -32,7 +32,7 @@ const About = () => {
                         </FaFileCode>
                         <p className='text-xl font-bold'>Email</p>
                     </div>
-                    <h3 className='text-xl'>Yourgreat@email.com</h3>
+                    <h3 className='text-xl'>Your@email.com</h3>
                 </div>
 
 
