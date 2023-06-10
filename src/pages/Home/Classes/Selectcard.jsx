@@ -4,7 +4,7 @@ import { Authcontext } from '../../../../component/Providers/Authprovider';
 import Swal from 'sweetalert2';
 import UseSelect from '../../../hooks/useaxiosSecure/UseSelect';
 import UseAdmin from '../../../hooks/UseAdmin';
-import Vedioplayer from '../../Vedioplayer/Vedioplayer';
+
 
 const Selectcard = ({ cl }) => {
     const [isAdmin] = UseAdmin();

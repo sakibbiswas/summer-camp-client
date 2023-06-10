@@ -7,7 +7,7 @@ import Popularinstructor from '../Popularinstructor/Popularinstructor';
 import Plan from '../plan/Plan';
 import About from '../about/About';
 import Discout from '../discount/Discout';
-import Vedioplayer from '../../Vedioplayer/Vedioplayer';
+
 
 
 
