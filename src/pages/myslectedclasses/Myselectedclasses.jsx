@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 const Myselectedclasses = () => {
     const [selected, refetch] = UseSelect();
-    console.log(selected);
     const handelDelete = cl => {
 
         Swal.fire({

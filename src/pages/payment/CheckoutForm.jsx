@@ -20,7 +20,7 @@ const CheckoutForm = ({ selected, price }) => {
         if (price > 0) {
             axiosSecure.post('/create-payment-intent', { price })
                 .then(res => {
-                    console.log(res.data.clientSecret);
+
                     setClientSecret(res.data.clientSecret)
                 })
 
@@ -33,13 +33,13 @@ const CheckoutForm = ({ selected, price }) => {
         if (!stripe || !elements) {
             return;
         }
-        // each type of element.
+
         const card = elements.getElement(CardElement);
 
         if (card == null) {
             return;
         }
-        // Use your card Element with other Stripe.js APIs
+
         const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
             card,
@@ -52,7 +52,7 @@ const CheckoutForm = ({ selected, price }) => {
 
         else {
             Setcarderror('')
-            // console.log('[PaymentMethod]', paymentMethod);
+
         }
 
         setprocessing(true)
@@ -73,7 +73,7 @@ const CheckoutForm = ({ selected, price }) => {
             console.log(confirmError);
         }
         setprocessing(false)
-        console.log('payment intent', paymentIntent)
+
         if (paymentIntent.status === 'succeeded') {
             setTransactionId(paymentIntent.id)
             // save payment information to server
@@ -91,10 +91,7 @@ const CheckoutForm = ({ selected, price }) => {
             }
             axiosSecure.post('/payments', payment)
                 .then(res => {
-                    console.log(res.data);
-                    // if (res.data.result.insertedId) {
 
-                    // }
                 })
 
             // fetch('http://localhost:3000/payments', {

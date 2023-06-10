@@ -9,10 +9,9 @@ import UseAdmin from '../../src/hooks/UseAdmin';
 import Useinstructor from '../../src/hooks/Useinstructor';
 
 const Deshbord = () => {
-    // Todo-----
-    // const isAdmin = true;
     const [isAdmin] = UseAdmin();
     const [isInstructor] = Useinstructor()
+
     const [selected] = UseSelect()
     const [isOpen, setIsOpen] = useState(false);
 
