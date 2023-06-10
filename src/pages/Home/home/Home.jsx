@@ -25,7 +25,7 @@ const Home = () => {
             <Popularinstructor></Popularinstructor>
             <Plan></Plan>
             <About></About>
-            {/* <Vedioplayer></Vedioplayer> */}
+
             <Discout></Discout>
 
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { FaFileCode, FaLocationArrow, FaPhoneAlt, FaTelegramPlane, FaVoicemail } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -37,6 +38,7 @@ const About = () => {
 
 
             </div>
+
         </div>
     );
 };
