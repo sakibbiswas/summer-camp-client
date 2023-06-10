@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Useclass from '../../../hooks/useclass/Useclass';
 import Classcard from '../classcard/Classcard';
 import SectionTitle from '../SectionTitle/SectionTitle';
-
+import { motion } from "framer-motion"
 const Popularclass = () => {
     const [classes] = Useclass();
     const slicedData = classes.slice(0, 6);
