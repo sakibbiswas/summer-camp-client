@@ -1,12 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaTrashAlt, FaUserShield } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
-
+import React, { useState } from 'react';
 const ALLusers = () => {
-    // const [axiosSecure] = useAxiosSecure()
+    const [asc, setase] = useState(true)
     const { data: users = [], refetch } = useQuery(['users'], async () => {
         const res = await fetch(`http://localhost:3000/users`)
         return res.json();
@@ -82,12 +80,13 @@ const ALLusers = () => {
                 }
             })
     }
+
     return (
         <div className='w-full'>
 
             <Helmet
             >
-                <title>Mozart|| All students</title>
+                <title>Mozart|| Manage Users</title>
             </Helmet>
 
 
@@ -104,6 +103,7 @@ const ALLusers = () => {
                             <th>Admin</th>
                             <th>Instructor</th>
                             <th>Action</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -144,6 +144,11 @@ const ALLusers = () => {
                             </td>
                             <td>
                                 <button onClick={() => handelDelete(user)} className="btn btn-ghost bg-red-500 text-white btn-md"><FaTrashAlt ></FaTrashAlt></button>
+                            </td>
+                            <td>
+                                <button className="btn btn-xs btn-info"
+                                    onClick={() => setase(!asc)}
+                                >{asc ? 'pending' : "approved"}</button>
                             </td>
 
                         </tr>

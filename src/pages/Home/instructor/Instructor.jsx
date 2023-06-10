@@ -5,6 +5,7 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 
 const Instructor = () => {
     const [classes] = Useclass()
+    const slicedata = classes.slice(0, 6)
     return (
         <div className=''>
             <Helmet>
@@ -15,7 +16,7 @@ const Instructor = () => {
             <p className='text-4xl text uppercase font-bold text-center mb-10'>“Music is everybody’s possession. It’s only publishers who think that people own it.”</p>
             <div className='grid md:grid-cols-3 gap-8'>
                 {
-                    classes.map(cl => <div
+                    slicedata.map(cl => <div
                         key={cl._id}
                         cl={cl}>
 

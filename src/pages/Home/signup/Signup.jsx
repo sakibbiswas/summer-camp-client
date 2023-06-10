@@ -20,7 +20,7 @@ const Signup = () => {
 
                 update(data.name, data.photo)
                     .then(() => {
-                        const saveUser = { name: data.name, email: data.email }
+                        const saveUser = { name: data.name, email: data.email, status: 'pending' }
                         fetch('http://localhost:3000/users', {
                             method: 'POST',
                             headers: {

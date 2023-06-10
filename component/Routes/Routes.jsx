@@ -17,6 +17,7 @@ import AdminRoute from './AdminRoute.jsx';
 import Paymenthistory from '../../src/pages/paymenthistory/Paymenthistory.jsx';
 import Addclasses from '../../src/pages/Addclasses/Addclasses.jsx';
 import InstructorRoute from './InstructorRoute.jsx';
+import Myclasses from '../../src/pages/myclasses/Myclasses.jsx';
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -77,9 +78,16 @@ export const router = createBrowserRouter([
                 path: 'allusers',
                 element: <AdminRoute><ALLusers></ALLusers></AdminRoute>
             },
+            // Instructor rout
             {
                 path: 'addclasses',
                 element: <InstructorRoute><Addclasses></Addclasses></InstructorRoute>
+            },
+            {
+                path: 'myclasses',
+                element: <InstructorRoute>
+                    <Myclasses></Myclasses>
+                </InstructorRoute>
             },
             // {
             //     path: 'manageItems',

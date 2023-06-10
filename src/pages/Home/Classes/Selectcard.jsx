@@ -3,9 +3,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Authcontext } from '../../../../component/Providers/Authprovider';
 import Swal from 'sweetalert2';
 import UseSelect from '../../../hooks/useaxiosSecure/UseSelect';
+import UseAdmin from '../../../hooks/UseAdmin';
 
 const Selectcard = ({ cl }) => {
-
+    const [isAdmin] = UseAdmin();
     const { user } = useContext(Authcontext)
     const navigate = useNavigate();
     const location = useLocation()
@@ -13,10 +14,10 @@ const Selectcard = ({ cl }) => {
     const [, refetch] = UseSelect()
     const [disabled, setdisabled] = useState(true)
     const [color, setcolor] = useState(false)
-
     const handelselectClass = cl => {
 
         if (user && user.email) {
+
             const selected = { selectedId: _id, name, price, image, instructor, instructor_img, seats, email: user.email }
             fetch('http://localhost:3000/select', {
                 method: "POST",
@@ -61,13 +62,13 @@ const Selectcard = ({ cl }) => {
             setdisabled(false)
 
             setcolor(!color)
+
         }
         else {
             setdisabled(true)
 
-
-
         }
+
     }
 
     return (

@@ -31,7 +31,7 @@ const Deshbord = () => {
 
                                 </ListItemIcon>
                                 <Link to='/deshbord/allusers' >
-                                    <ListItemText primary="All students" />
+                                    <ListItemText primary="Manage users" />
                                 </Link>
                             </ListItem>
 
@@ -42,6 +42,14 @@ const Deshbord = () => {
                                 </ListItemIcon>
                                 <Link to='/deshbord/addclasses' >
                                     <ListItemText primary="Add Classes" />
+                                </Link>
+                            </ListItem>
+                            <ListItem button>
+                                <ListItemIcon>
+
+                                </ListItemIcon>
+                                <Link to='/deshbord/myclasses' >
+                                    <ListItemText primary="My Classes" />
                                 </Link>
                             </ListItem>
 

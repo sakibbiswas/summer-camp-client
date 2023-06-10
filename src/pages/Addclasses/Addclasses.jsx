@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet';
 import SectionTitle from '../Home/SectionTitle/SectionTitle';
+import { Authcontext } from '../../../component/Providers/Authprovider';
 const img_hosting_token = import.meta.env.VITE_image_upload_token;
 
 const Addclasses = () => {
     const [axiosSecure] = useAxiosSecure();
+    const { user } = useContext(Authcontext)
     const img_hosting_url = `https://api.imgbb.com/1/upload?expiration=600&key=${img_hosting_token}`
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = data => {
@@ -60,6 +62,18 @@ const Addclasses = () => {
 
                 <div class="form-control w-full ">
                     <label class="label">
+                        <span class="label-text font-semibold">Instructor Name</span>
+                    </label>
+                    <input type="text" defaultValue={user.displayName} readOnly {...register("instructor", { required: true, })} placeholder="instructor Name" class="input input-bordered w-full " />
+                </div>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text font-semibold">Instructor email</span>
+                    </label>
+                    <input defaultValue={user.email} readOnly type="email" {...register("email", { required: true, })} placeholder="instructor email" class="input input-bordered w-full " />
+                </div>
+                <div class="form-control w-full ">
+                    <label class="label">
                         <span class="label-text font-semibold">Price</span>
                     </label>
                     <input type="number" {...register("price", { required: true, })} placeholder="Type here" class="input input-bordered w-full " />
@@ -70,7 +84,7 @@ const Addclasses = () => {
                         <span class="label-text font-semibold">Available seats</span>
 
                     </label>
-                    <input type="text" {...register("seats", { required: true, })} placeholder="seats" class="input input-bordered w-full " />
+                    <input type="number" {...register("seats", { required: true, })} placeholder="seats" class="input input-bordered w-full " />
 
                 </div>
                 <div class="form-control w-full  ">
