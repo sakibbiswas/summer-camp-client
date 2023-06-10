@@ -133,7 +133,7 @@ const Plan = () => {
                     </div>
                     <div className="text-center">
 
-                        <button className='btn btn-outline'>Join Now </button>
+                        <button className='btn btn-outline'>Join Now</button>
                     </div>
                 </motion.div>
 

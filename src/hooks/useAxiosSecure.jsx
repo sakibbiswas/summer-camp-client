@@ -2,10 +2,8 @@ import { useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Authcontext } from '../../component/Providers/Authprovider';
-
-// Replace 'path/to/AuthContext' with the correct path to your AuthContext
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:3000', // Replace with your base URL
+    baseURL: 'http://localhost:3000',
 });
 const useAxiosSecure = () => {
     const navigate = useNavigate();
