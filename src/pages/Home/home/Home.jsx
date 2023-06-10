@@ -7,6 +7,8 @@ import Popularinstructor from '../Popularinstructor/Popularinstructor';
 import Plan from '../plan/Plan';
 import About from '../about/About';
 import Discout from '../discount/Discout';
+import Vedioplayer from '../../Vedioplayer/Vedioplayer';
+
 
 
 const Home = () => {
@@ -18,10 +20,12 @@ const Home = () => {
             </Helmet>
 
             <Banner></Banner>
+
             <Popularclass></Popularclass>
             <Popularinstructor></Popularinstructor>
             <Plan></Plan>
             <About></About>
+            {/* <Vedioplayer></Vedioplayer> */}
             <Discout></Discout>
 
         </div>

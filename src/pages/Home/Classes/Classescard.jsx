@@ -4,11 +4,12 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 import { Helmet } from 'react-helmet';
 import Selectcard from './Selectcard';
 
+
 const Classescard = () => {
     const [classes] = Useclass()
 
     return (
-        <div>
+        <div >
             <Helmet>
                 <title>Mozart || Classes page</title>
             </Helmet>
@@ -25,6 +26,7 @@ const Classescard = () => {
                     </Selectcard>)
                 }
             </div>
+
         </div>
     );
 };
