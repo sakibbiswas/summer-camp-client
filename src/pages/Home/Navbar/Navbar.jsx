@@ -22,7 +22,8 @@ const Navbar = () => {
          hover:scale-90 duration-300 '><Link to='/'>Home</Link></li>
         <li className='font-bold ' ><Link to='/classes'>Classes</Link></li>
         <li className='font-bold ' ><Link to='/instructor'>Instructors</Link></li>
-        {/* <li><Link to={isAdmin ? 'deshbord/adminhome' : 'deshbord/userhome'}>Dashboard</Link></li> */}
+        <li className='font-bold ' ><Link to='/errorpage'>Error</Link></li>
+
         <li className='font-bold ml-5 '><Link to='/deshbord/selected'>
             Dashboard
         </Link></li>

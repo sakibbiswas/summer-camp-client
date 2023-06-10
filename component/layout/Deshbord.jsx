@@ -1,6 +1,6 @@
 
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import { FaHome, FaWallet, FaCalendarAlt, FaUtensils, FaUser, FaBook, FaUsers } from 'react-icons/fa';
+import { FaHome, FaWallet, FaCalendarAlt, FaUtensils, FaUser, FaBook, FaUsers, FaHouseUser, FaAmazonPay, FaCcAmazonPay, FaAddressBook, FaBookReader, FaCheckCircle, FaCheckSquare } from 'react-icons/fa';
 import UseSelect from '../../src/hooks/useaxiosSecure/UseSelect';
 import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { Drawer, Button } from '@mui/material';
@@ -28,17 +28,25 @@ const Deshbord = () => {
                         isAdmin ? <>
                             <ListItem button>
                                 <ListItemIcon>
-
+                                    <FaUsers></FaUsers>
                                 </ListItemIcon>
                                 <Link to='/deshbord/allusers' >
                                     <ListItemText primary="Manage users" />
+                                </Link>
+                            </ListItem>
+                            <ListItem button>
+                                <ListItemIcon>
+                                    <FaBookReader></FaBookReader>
+                                </ListItemIcon>
+                                <Link to='/deshbord/manageclasses' >
+                                    <ListItemText primary="Manage classes" />
                                 </Link>
                             </ListItem>
 
                         </> : isInstructor ? <>
                             <ListItem button>
                                 <ListItemIcon>
-
+                                    <FaAddressBook></FaAddressBook>
                                 </ListItemIcon>
                                 <Link to='/deshbord/addclasses' >
                                     <ListItemText primary="Add Classes" />
@@ -46,7 +54,7 @@ const Deshbord = () => {
                             </ListItem>
                             <ListItem button>
                                 <ListItemIcon>
-
+                                    <FaBookReader></FaBookReader>
                                 </ListItemIcon>
                                 <Link to='/deshbord/myclasses' >
                                     <ListItemText primary="My Classes" />
@@ -58,7 +66,7 @@ const Deshbord = () => {
                             <>
                                 <ListItem button>
                                     <ListItemIcon>
-
+                                        <FaCheckCircle></FaCheckCircle>
                                     </ListItemIcon>
                                     <Link to='/deshbord/selected' >
                                         <ListItemText primary="My selected class" />
@@ -66,6 +74,7 @@ const Deshbord = () => {
                                 </ListItem>
                                 <ListItem button>
                                     <ListItemIcon>
+                                        <FaCheckSquare></FaCheckSquare>
                                     </ListItemIcon>
                                     <Link to='/deshbord/enrolled' >
                                         <ListItemText primary="My enrolled class" />
@@ -73,6 +82,7 @@ const Deshbord = () => {
                                 </ListItem>
                                 <ListItem button>
                                     <ListItemIcon>
+                                        <FaCcAmazonPay></FaCcAmazonPay>
                                     </ListItemIcon>
                                     <Link to='/deshbord/history' >
                                         <ListItemText primary="Payment History" />
@@ -89,7 +99,7 @@ const Deshbord = () => {
 
                     <ListItem button>
                         <ListItemIcon>
-
+                            <FaHouseUser></FaHouseUser>
                         </ListItemIcon>
                         <Link to='/'>
                             <ListItemText primary="Home" />

@@ -18,6 +18,8 @@ import Paymenthistory from '../../src/pages/paymenthistory/Paymenthistory.jsx';
 import Addclasses from '../../src/pages/Addclasses/Addclasses.jsx';
 import InstructorRoute from './InstructorRoute.jsx';
 import Myclasses from '../../src/pages/myclasses/Myclasses.jsx';
+import ManageClasses from '../../src/pages/Manangeclasses/ManageClasses.jsx';
+import Errorpage from '../../src/pages/errorpage/Errorpage.jsx';
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -35,10 +37,6 @@ export const router = createBrowserRouter([
                 path: '/instructor',
                 element: <Instructor></Instructor>
             },
-            //         {
-            //             path: '/shop/:category',
-            //             element: <Shop></Shop>
-            //         },
             {
                 path: '/login',
                 element: <Login></Login>
@@ -46,6 +44,10 @@ export const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Signup></Signup>
+            },
+            {
+                path: '/errorpage',
+                element: <Errorpage></Errorpage>
             },
         ]
     },
@@ -70,13 +72,13 @@ export const router = createBrowserRouter([
                 element: <Paymenthistory></Paymenthistory>
             },
             // admin routes
-            // {
-            //     path: 'adminhome',
-            //     element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
-            // },
             {
                 path: 'allusers',
                 element: <AdminRoute><ALLusers></ALLusers></AdminRoute>
+            },
+            {
+                path: 'manageclasses',
+                element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
             },
             // Instructor rout
             {
@@ -89,10 +91,6 @@ export const router = createBrowserRouter([
                     <Myclasses></Myclasses>
                 </InstructorRoute>
             },
-            // {
-            //     path: 'manageItems',
-            //     element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
-            // },
 
         ]
     }

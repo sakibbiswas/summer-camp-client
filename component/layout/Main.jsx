@@ -1,14 +1,18 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../../src/pages/Home/Navbar/Navbar';
 import Footer from '../../src/pages/Home/footer/Footer';
 
+
 const Main = () => {
+    const location = useLocation()
+    const noHeaderFooter = location.pathname.includes('errorpage')
+
     return (
         <div>
-            <Navbar></Navbar>
+            {noHeaderFooter || <Navbar></Navbar>}
             <Outlet></Outlet>
-            <Footer></Footer>
+            {noHeaderFooter || <Footer></Footer>}
         </div>
     );
 };
