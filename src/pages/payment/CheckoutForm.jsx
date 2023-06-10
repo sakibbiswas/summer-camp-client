@@ -94,7 +94,7 @@ const CheckoutForm = ({ selected, price }) => {
 
                 })
 
-            // fetch('http://localhost:3000/payments', {
+            // fetch('https://summer-camp-server-sakibbiswas.vercel.app/payments', {
             //     method: 'POST',
             //     headers: {
             //         'content-type': 'application/json'

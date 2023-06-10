@@ -6,7 +6,7 @@ const UseEnrolled = () => {
         queryKey: ['enrolled'],
 
         queryFn: async () => {
-            const response = await fetch('http://localhost:3000/enrolled')
+            const response = await fetch('https://summer-camp-server-sakibbiswas.vercel.app/enrolled')
             return response.json()
 
         }

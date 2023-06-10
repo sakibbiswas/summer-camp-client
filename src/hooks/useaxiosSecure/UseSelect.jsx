@@ -8,7 +8,7 @@ const UseSelect = () => {
         queryKey: ['select', user?.email],
         enabled: !loading,
         queryFn: async () => {
-            const response = await fetch(`http://localhost:3000/select?email=${user.email}`, {
+            const response = await fetch(`https://summer-camp-server-sakibbiswas.vercel.app/select?email=${user.email}`, {
 
                 headers: {
                     authorization: `Bearer ${token}`

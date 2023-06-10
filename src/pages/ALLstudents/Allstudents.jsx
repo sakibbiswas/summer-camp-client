@@ -7,7 +7,7 @@ import useAxiosSecure from '../../hooks/useAxiosSecure';
 const ALLusers = () => {
     const [asc, setase] = useState(true)
     // const { data: users = [], refetch } = useQuery(['users'], async () => {
-    //     const res = await fetch(`http://localhost:3000/users`)
+    //     const res = await fetch(`https://summer-camp-server-sakibbiswas.vercel.app/users`)
     //     return res.json();
     // })
 
@@ -30,7 +30,7 @@ const ALLusers = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/users/${user._id}`, {
+                fetch(`https://summer-camp-server-sakibbiswas.vercel.app/users/${user._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -48,7 +48,7 @@ const ALLusers = () => {
         })
     }
     const handelMakeAdmin = user => {
-        fetch(`http://localhost:3000/users/admin/${user._id}`, {
+        fetch(`https://summer-camp-server-sakibbiswas.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
         })
 
@@ -67,7 +67,7 @@ const ALLusers = () => {
             })
     }
     const handelMakeIntructor = user => {
-        fetch(`http://localhost:3000/users/instructor/${user._id}`, {
+        fetch(`https://summer-camp-server-sakibbiswas.vercel.app/users/instructor/${user._id}`, {
             method: 'PATCH'
         })
 

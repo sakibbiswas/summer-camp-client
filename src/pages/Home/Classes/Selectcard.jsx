@@ -20,7 +20,7 @@ const Selectcard = ({ cl }) => {
         if (user && user.email) {
 
             const selected = { selectedId: _id, name, price, image, instructor, instructor_img, seats, email: user.email }
-            fetch('http://localhost:3000/select', {
+            fetch('https://summer-camp-server-sakibbiswas.vercel.app/select', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
