@@ -3,11 +3,17 @@ import React from 'react'
 import pic1 from '../../../assets/istockphoto-596345112-612x612.jpg'
 import pic3 from '../../../assets/p2.jpg'
 import pic2 from '../../../assets/p3.jpg'
-
+import { motion } from "framer-motion"
 const Banner = () => {
 
     return (
-        <div className="carousel w-full h-[600px] ">
+        <motion.div
+            initial={{ opacity: 0, scale: 0.5 }
+            }
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+
+            className="carousel w-full h-[600px] " >
 
             <div id="slide2" className="carousel-item relative w-full">
                 <img src={pic2} className=" rounded-xl w-full" />
@@ -55,7 +61,7 @@ const Banner = () => {
                 </div>
             </div>
 
-        </div>
+        </motion.div >
 
     );
 };

@@ -11,9 +11,7 @@ const Popularclass = () => {
         <div>
             <SectionTitle
                 heading='Popular classes'></SectionTitle>
-            <Helmet>
-                <title>Mozart || Popularclass</title>
-            </Helmet>
+
             <p className='mb-8 font-bold text-2xl text-center text-orange-400'>Our class is where your passions come into play every day.</p>
             <div className="grid md:grid-cols-3 gap-5">
                 {
