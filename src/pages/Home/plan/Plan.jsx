@@ -115,7 +115,7 @@ const Plan = () => {
                             <FaCheck>
 
                             </FaCheck>
-                            <p>Free Silver Facilitites</p>
+                            <p>Free Silver Facilities</p>
                         </div>
                         <div className="flex gap-4 items-center">
                             <FaCheck>
