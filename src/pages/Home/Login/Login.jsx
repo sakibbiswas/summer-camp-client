@@ -99,7 +99,7 @@ const Login = () => {
                                     <input className="btn btn-primary btn-md w-[350px] " type="submit" value="login" />
                                 </div>
                             </form>
-                            <p className='my-4 text-center'>New to bistro boss <Link className='text-orange-500 font-bold' to='/signup'>Sign Up</Link></p>
+                            <p className='my-4 text-center'>New to Mozart Academy <Link className='text-orange-500 font-bold' to='/signup'>Sign Up</Link></p>
                             <Sociallogin></Sociallogin>
                         </div>
                     </div>
