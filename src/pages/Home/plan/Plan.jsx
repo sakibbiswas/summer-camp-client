@@ -68,7 +68,7 @@ const Plan = () => {
                             </FaCheck>
                             <p>Free 3x Class Meeting</p>
                         </div>
-                        <div className="flex gap-4 items-center">
+                        <div className="flex  gap-4 items-center">
                             <FaCheck>
 
                             </FaCheck>
