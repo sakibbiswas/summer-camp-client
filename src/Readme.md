@@ -1,7 +1,7 @@
 ### My website name : Mozart :smile:
 
 
-[ Live Link] : https://summer-camp-client-db0ed.web.+app
+[ Live Link] : https://summer-camp-client-db0ed.web.app
 * I create a responsive  navbar .My website should have a navbar.with the Website name, Home,error,Classes,Instructor, Dashboard and User profile picture. The user profile picture on the navbar is conditional. If the user is signed in, the navbar will show the profile picture; otherwise, it will show the Login button. 
 * I create a responsive slider and responsive Footer.
 *In this website i finally work Firebase Authentication(email,password,google )

@@ -6,7 +6,7 @@ const Plan = () => {
     return (
         <div>
             <SectionTitle heading='Manage your plan with billing details'></SectionTitle>
-            <div className="grid md:grid-cols-3 gap-5 ml-20">
+            <div className="grid md:grid-cols-3 gap-5 ml-10">
                 <motion.div
                     animate={{
                         scale: [1, 2, 2, 1, 1],

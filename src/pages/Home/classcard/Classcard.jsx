@@ -8,7 +8,7 @@ const Classcard = ({ card }) => {
 
 
 
-            <motion.div className="card w-80 bg-base-100 shadow-xl" whileHover={{ scale: 1.1 }}
+            <motion.div className="card w-80 ml-5 bg-base-100 shadow-xl" whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}>
                 <figure><img className='w-full h-[200px] rounded-xl' src={image} alt="Shoes" /></figure>
                 <div className="card-body">
