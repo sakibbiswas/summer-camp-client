@@ -14,13 +14,13 @@ const Instructor = () => {
             <SectionTitle heading=""></SectionTitle>
             <SectionTitle heading="our Instructor"></SectionTitle>
             <p className='text-4xl text uppercase font-bold text-center mb-10'>“Music is everybody’s possession. It’s only publishers who think that people own it.”</p>
-            <div className='grid md:grid-cols-3 gap-8'>
+            <div className='grid md:grid-cols-3 gap-5 md:ml-10'>
                 {
                     slicedata.map(cl => <div
                         key={cl._id}
                         cl={cl}>
 
-                        <div className="card w-80 bg-base-100 shadow-xl">
+                        <div className="card  w-80 bg-base-100 shadow-xl">
                             <figure><img className='w-full h-[200px] rounded-xl' src={cl.instructor_img} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">Name : {cl.instructor}</h2>
