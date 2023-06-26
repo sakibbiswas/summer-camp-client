@@ -13,7 +13,8 @@
 * I can use framer animation in this website.
 * I can used React hook form and useTitle all the routs.
 * I create admin & instructor route 
-* I install a mongodb and send data on the database . 
+* I install a mongodb and send data on the database .
+* Admin email  sakib@gmail.com and password Sakib#9988
 
 
 
